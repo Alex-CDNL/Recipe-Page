@@ -1,0 +1,153 @@
+$rose800: hsl(332, 51%, 32%);
+$rose50: hsl(330, 100%, 98%);
+$white: hsl(0, 0%, 100%);
+$stone100: hsl(30, 54%, 90%);
+$stone150: hsl(30, 18%, 87%);
+$stone600: hsl(30, 10%, 34%);
+$stone900: hsl(24, 5%, 18%);
+$brown800: hsl(14, 45%, 36%);
+@font-face {
+  font-family: outfit;
+  src: url(../assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: youngserif;
+  src: url(../assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: $stone100;
+}
+
+h2 {
+  color: $brown800;
+  margin-bottom: 24px;
+  font-family: youngserif, sans-serif;
+}
+
+p {
+  font-size: 16px;
+  font-family: outfit, sans-serif;
+  color: $stone600;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 24px;
+  margin: 128px auto;
+  max-width: 736px;
+  padding: 0 40px;
+  gap: 32px;
+  background-color: $white;
+
+  img {
+    max-width: 656px;
+    max-height: 300px;
+    margin: 40px 0px 8px 0px;
+    border-radius: 12px;
+  }
+  .container-head {
+    h1 {
+      margin-bottom: 24px;
+      font-size: 40px;
+      color: $stone900;
+      font-family: youngserif, sans-serif;
+    }
+    article {
+      padding: 24px;
+      background-color: $rose50;
+      h3 {
+        margin-bottom: 16px;
+        color: $rose800;
+        font-family: outfit, sans-serif;
+      }
+      li {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        ul {
+          list-style-type: disc;
+          display: list-item;
+          padding-left: 16px;
+          margin-left: 16px;
+          color: $stone600;
+          font-family: outfit, sans-serif;
+        }
+      }
+    }
+  }
+  .container-ingredient {
+    width: 100%;
+    li {
+      list-style-type: none;
+      gap: 8px;
+      display: flex;
+      flex-direction: column;
+      ul {
+        list-style-type: disc;
+        display: list-item;
+        padding-left: 16px;
+        margin-left: 16px;
+        color: $stone600;
+        font-family: outfit, sans-serif;
+      }
+    }
+  }
+  .container-instruction {
+    ol {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      ul {
+        display: list-item;
+        list-style-type: auto;
+        padding-left: 8px;
+        margin-left: 16px;
+        color: $stone600;
+        font-family: outfit, sans-serif;
+      }
+    }
+  }
+  .container-nutrition {
+    width: 100%;
+    margin-bottom: 40px;
+    .nutrition-subtitle {
+      margin-bottom: 24px;
+      font-family: outfit, sans-serif;
+      color: $stone600;
+    }
+    .table {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      .line {
+        display: flex;
+        flex-direction: row;
+        margin: 0px 32px;
+        border-bottom: solid 1px $stone150;
+        padding-bottom: 5px;
+        .line-info {
+          width: 50%;
+          font-family: outfit, sans-serif;
+          color: $stone600;
+        }
+        .kcal {
+          width: 50%;
+          font-family: outfit, sans-serif;
+          color: $brown800;
+        }
+      }
+    }
+  }
+}
+
+.attribution {
+  text-align: center;
+}
